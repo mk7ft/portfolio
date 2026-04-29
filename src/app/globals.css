@@ -1,0 +1,245 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-editorial);
+  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-display);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+}
+
+:root {
+  --background: #080808;
+  --foreground: #f0ede8;
+  --card: #111111;
+  --card-foreground: #f0ede8;
+  --primary: #f0ede8;
+  --primary-foreground: #080808;
+  --muted: #1a1a1a;
+  --muted-foreground: #6b6b6b;
+  --accent: #c8b89a;
+  --accent-foreground: #080808;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.08);
+  --ring: rgba(200, 184, 154, 0.4);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: auto; /* Lenis handles this */
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-editorial), 'Georgia', serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  /* Restore pointer cursor on all interactables */
+  a, button, [role="button"], label, input, select, textarea {
+    cursor: none;
+  }
+
+  ::selection {
+    background: rgba(200, 184, 154, 0.25);
+    color: #f0ede8;
+  }
+}
+
+/* ─── Typography ─────────────────────────────────── */
+.font-display {
+  font-family: var(--font-display), 'Georgia', serif;
+}
+
+/* ─── Noise texture overlay ──────────────────────── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 128px 128px;
+}
+
+/* ─── Scrollbar ──────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(200, 184, 154, 0.3);
+  border-radius: 99px;
+}
+
+/* ─── Lenis ──────────────────────────────────────── */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* ─── Clip utilities ─────────────────────────────── */
+.clip-text {
+  overflow: hidden;
+  display: block;
+}
+
+/* ─── Gradient text ──────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #f0ede8 0%, #c8b89a 50%, #8a7560 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Horizontal rule ────────────────────────────── */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(200,184,154,0.3), transparent);
+}
+
+/* ─── Glow effect ────────────────────────────────── */
+.glow {
+  box-shadow: 0 0 60px rgba(200, 184, 154, 0.08), 0 0 120px rgba(200, 184, 154, 0.04);
+}
+
+/* ─── Custom cursor ──────────────────────────────── */
+.cursor-dot.cursor-expanded {
+  width: 28px !important;
+  height: 28px !important;
+  margin-top: -14px !important;
+  margin-left: -14px !important;
+  background: rgba(212,168,75,0.18) !important;
+  border: 1px solid rgba(212,168,75,0.55);
+}
+
+/* Touch / mobile: restore normal cursor */
+@media (hover: none) {
+  body, a, button, [role="button"] {
+    cursor: auto !important;
+  }
+}
+
+/* ─── Stat cards ─────────────────────────────────── */
+.stat-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(10px);
+}
+
+/* ─── Bulb pulse ─────────────────────────────────── */
+@keyframes bulbPulse {
+  0%, 100% { filter: drop-shadow(0 0 6px rgba(245,240,232,0.7)); opacity: 1; }
+  50%       { filter: drop-shadow(0 0 10px rgba(245,240,232,0.95)); opacity: 0.85; }
+}
+
+/* ─── Marquee ────────────────────────────────────── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+  display: flex;
+  width: max-content;
+}
+/* hover-pause removed — drag-scroll handles interaction */
+
+/* ─── Continuous page background ─────────────────── */
+body {
+  background: #080808;
+}
+
+/* ─── Glow pulse (nav button) ───────────────────── */
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.35; }
+  50%       { opacity: 0.6;  }
+}
+
+/* ─── Floating orb animations ────────────────────── */
+@keyframes floatA {
+  0%, 100% { transform: translate(0px,   0px)   scale(1);    }
+  33%       { transform: translate(28px, -38px)  scale(1.04); }
+  66%       { transform: translate(-18px, 22px)  scale(0.97); }
+}
+@keyframes floatB {
+  0%, 100% { transform: translate(0px,   0px)   scale(1);    }
+  40%       { transform: translate(-32px, 24px)  scale(1.05); }
+  70%       { transform: translate(22px, -28px)  scale(0.96); }
+}
+@keyframes floatC {
+  0%, 100% { transform: translate(0px,   0px)   scale(1);    }
+  25%       { transform: translate(18px,  32px)  scale(1.03); }
+  75%       { transform: translate(-28px,-18px)  scale(0.98); }
+}
+@keyframes shimmer {
+  0%, 100% { opacity: 0.3; }
+  50%       { opacity: 0.7; }
+}
+@keyframes driftX {
+  0%, 100% { transform: translateX(0);    }
+  50%       { transform: translateX(14px); }
+}
+/* ─── Scan line (decorative) ─────────────────────── */
+@keyframes scanLine {
+  0%   { transform: translateY(-100%); opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+/* Hide Next.js error overlay portal */
+nextjs-portal {
+  display: none !important;
+}
+
+/* ─── Mobile chapter fixes ───────────────────────── */
+/* Stat panel: add top margin when stacked on mobile */
+@media (max-width: 1023px) {
+  .stat-panel-mobile-top {
+    margin-top: clamp(1.5rem, 3vh, 2.5rem);
+  }
+  /* Cap operator photo height on mobile/iPad */
+  .operator-photo-wrap {
+    max-height: 200px !important;
+    min-height: 120px !important;
+  }
+}
