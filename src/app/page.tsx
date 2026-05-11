@@ -5,7 +5,6 @@ import StoryConsultant from "@/components/story-consultant";
 import StoryOperator from "@/components/story-operator";
 import StoryUSF from "@/components/story-usf";
 import Footer from "@/components/footer";
-import ChapterArrows from "@/components/chapter-arrows";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -25,7 +24,6 @@ export default function Home() {
         <Footer />
       </main>
 
-        <ChapterArrows />
         <Analytics />
         <SpeedInsights />
       </>

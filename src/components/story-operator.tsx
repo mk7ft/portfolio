@@ -17,9 +17,6 @@ const STATS = [
 ];
 
 const BODY_LINES = [
-  'On-site paramedical volunteer & pentalingual translator.',
-  'D2D sales and marketing representative.',
-  'Restaurant and culinary management.',
   'I operate anywhere, under anything.',
 ];
 
@@ -36,11 +33,6 @@ export default function StoryOperator() {
       >
         <SectionReveal>
 
-          <Reveal direction="none" className="flex items-center gap-4 mb-3">
-            <span style={{ fontSize: '0.62rem', letterSpacing: '0.5em', textTransform: 'uppercase', color: GOLD_DIM, fontFamily: 'var(--font-display)' }}>Chapter III</span>
-            <span className="h-px w-12" style={{ background: `linear-gradient(90deg, ${GOLD_DIM}, transparent)` }} />
-            <span style={{ fontSize: '0.62rem', letterSpacing: '0.15em', color: 'rgba(200,144,58,0.22)', fontFamily: 'var(--font-display)' }}>2022 - 2025</span>
-          </Reveal>
 
           <div style={{ marginBottom: 'clamp(1rem,2.5vh,2.5rem)' }}>
             <LineReveal delay={0.05}>
@@ -71,7 +63,7 @@ export default function StoryOperator() {
                     fontSize: 'clamp(0.82rem,1vw,0.95rem)',
                     lineHeight: 1.75,
                     color: i === 3 ? 'rgba(240,237,232,0.55)' : TEXT_DIM,
-                    fontFamily: 'var(--font-display)',
+                    fontFamily: 'var(--font-editorial)',
                     letterSpacing: '0.03em',
                     fontStyle: i === 3 ? 'italic' : 'normal',
                     marginTop: i === 3 ? '0.75rem' : 0,
@@ -122,7 +114,7 @@ export default function StoryOperator() {
                   letterSpacing: '0.35em',
                   textTransform: 'uppercase',
                   color: 'rgba(248,248,248,0.38)',
-                  fontFamily: 'var(--font-display)',
+                  fontFamily: 'var(--font-editorial)',
                 }}>
                   Madinah, Saudi Arabia
                 </span>
@@ -175,7 +167,7 @@ export default function StoryOperator() {
                       }}
                     />
 
-                    <span style={{ fontSize: '0.58rem', color: 'rgba(200,144,58,0.25)', fontFamily: 'var(--font-display)', letterSpacing: '0.2em', flexShrink: 0, width: '1.4rem', position: 'relative' }}>
+                    <span style={{ fontSize: '0.58rem', color: 'rgba(200,144,58,0.25)', fontFamily: 'var(--font-editorial)', letterSpacing: '0.2em', flexShrink: 0, width: '1.4rem', position: 'relative' }}>
                       {s.n}
                     </span>
 
@@ -208,13 +200,13 @@ export default function StoryOperator() {
                       transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                       style={{ display: 'flex', flexDirection: 'column', gap: '8px', minWidth: 0, flex: 1, position: 'relative' }}
                     >
-                      <span style={{ fontSize: 'clamp(0.62rem,0.9vw,0.82rem)', color: TEXT, fontFamily: 'var(--font-display)', letterSpacing: '0.07em', textTransform: 'uppercase', lineHeight: 1.4, wordBreak: 'break-word' }}>
+                      <span style={{ fontSize: 'clamp(0.62rem,0.9vw,0.82rem)', color: TEXT, fontFamily: 'var(--font-editorial)', letterSpacing: '0.07em', textTransform: 'uppercase', lineHeight: 1.4, wordBreak: 'break-word' }}>
                         {s.unit}
                       </span>
-                      <span style={{ fontSize: 'clamp(0.56rem,0.75vw,0.6rem)', color: 'rgba(240,237,232,0.38)', fontFamily: 'var(--font-display)', letterSpacing: '0.05em', lineHeight: 1.5, wordBreak: 'break-word' }}>
+                      <span style={{ fontSize: 'clamp(0.56rem,0.75vw,0.6rem)', color: 'rgba(240,237,232,0.38)', fontFamily: 'var(--font-editorial)', letterSpacing: '0.05em', lineHeight: 1.5, wordBreak: 'break-word' }}>
                         {s.sub}
                       </span>
-                      <span style={{ fontSize: '0.54rem', color: 'rgba(200,144,58,0.38)', fontFamily: 'var(--font-display)', letterSpacing: '0.14em', textTransform: 'uppercase', marginTop: '2px' }}>
+                      <span style={{ fontSize: '0.54rem', color: 'rgba(200,144,58,0.38)', fontFamily: 'var(--font-editorial)', letterSpacing: '0.14em', textTransform: 'uppercase', marginTop: '2px' }}>
                         {s.label}
                       </span>
                     </motion.div>

@@ -86,7 +86,7 @@ export default function ChapterNav() {
                         fontSize: '0.55rem',
                         letterSpacing: '0.18em',
                         textTransform: 'uppercase',
-                        fontFamily: 'var(--font-display)',
+                        fontFamily: 'var(--font-editorial)',
                         color: 'rgba(200,144,58,0.65)',
                         whiteSpace: 'nowrap',
                       }}

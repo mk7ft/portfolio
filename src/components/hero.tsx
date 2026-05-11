@@ -155,7 +155,7 @@ export default function Hero() {
                 padding: 'clamp(0.6rem,1.4vh,1rem) clamp(1.2rem,2.5vw,2rem)',
                 background: 'linear-gradient(105deg, #c8903a 0%, #d4a84b 50%, #c8a040 100%)',
                 color: '#0c0a06',
-                fontFamily: 'var(--font-display)',
+                fontFamily: 'var(--font-editorial)',
                 fontSize: 'clamp(0.65rem,0.85vw,0.78rem)',
                 letterSpacing: '0.18em',
                 textTransform: 'uppercase',
@@ -258,7 +258,7 @@ export default function Hero() {
           style={{
             marginBottom: 'clamp(1.8rem,4vh,4rem)',
             color: 'rgba(240,237,232,0.35)',
-            fontFamily: 'var(--font-display)',
+            fontFamily: 'var(--font-editorial)',
             fontWeight: 300,
             fontSize: 'clamp(0.75rem,1.1vw,1rem)',
             letterSpacing: '0.08em',
@@ -281,7 +281,7 @@ export default function Hero() {
               padding: 'clamp(0.7rem,1.8vh,1.1rem) clamp(1.4rem,3.5vw,2.8rem)',
               border: '1px solid rgba(240,237,232,0.18)',
               color: '#f0ede8',
-              fontFamily: 'var(--font-display)',
+              fontFamily: 'var(--font-editorial)',
               fontSize: 'clamp(0.72rem,0.9vw,0.82rem)',
               letterSpacing: '0.15em',
               textTransform: 'uppercase',
@@ -306,7 +306,7 @@ export default function Hero() {
               padding: 'clamp(0.7rem,1.8vh,1.1rem) clamp(1.4rem,3.5vw,2.8rem)',
               background: 'linear-gradient(105deg, #c8903a 0%, #d4a84b 100%)',
               color: '#0c0a06',
-              fontFamily: 'var(--font-display)',
+              fontFamily: 'var(--font-editorial)',
               fontSize: 'clamp(0.72rem,0.9vw,0.82rem)',
               letterSpacing: '0.15em',
               textTransform: 'uppercase',
@@ -327,65 +327,38 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.85 }}
-        className="relative z-10 flex-shrink-0 pb-6 pt-4"
+        className="relative z-10 flex-shrink-0 pb-8 pt-6"
         style={{ borderTop: '1px solid rgba(200,184,154,0.07)' }}
       >
-        <div className="flex items-center justify-center gap-5 mb-6">
-          <span className="h-px flex-1 max-w-[70px]" style={{ background: 'linear-gradient(90deg, transparent, rgba(200,184,154,0.12))' }} />
-          <p style={{ fontSize: '0.56rem', letterSpacing: '0.38em', textTransform: 'uppercase', color: 'rgba(200,184,154,0.28)', fontFamily: 'var(--font-display)' }}>
-            Partners &amp; Media
-          </p>
-          <span className="h-px flex-1 max-w-[70px]" style={{ background: 'linear-gradient(90deg, rgba(200,184,154,0.12), transparent)' }} />
-        </div>
-
-        <div className="pointer-events-none absolute left-0 bottom-0 w-16 md:w-32 z-10" style={{ top: '0', background: 'linear-gradient(90deg, #080808 0%, transparent 100%)' }} />
-        <div className="pointer-events-none absolute right-0 bottom-0 w-16 md:w-32 z-10" style={{ top: '0', background: 'linear-gradient(270deg, #080808 0%, transparent 100%)' }} />
-
-        <div
-          className="overflow-hidden select-none"
-          style={{ cursor: 'grab' }}
-          onMouseDown={onMouseDown}
-          onMouseMove={onMouseMove}
-          onMouseUp={onMouseUp}
-          onMouseLeave={onMouseUp}
-          onTouchStart={onTouchStart}
-          onTouchMove={onTouchMove}
-          onTouchEnd={onTouchEnd}
-        >
-          <div ref={trackRef} className="flex items-center will-change-transform" style={{ width: 'max-content' }}>
-            {doubled.map((p, i) => (
-              <motion.a
-                key={i}
-                href={p.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={e => { if (isDragging.current && Math.abs(startX.current - e.clientX) > 5) e.preventDefault(); }}
-                whileHover={{ opacity: 1 }}
-                transition={{ duration: 0.25, ease: 'easeOut' }}
-                style={{
-                  margin: '0 clamp(2rem,5vw,5rem)',
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  opacity: 0.30,
-                  flexShrink: 0,
-                  textDecoration: 'none',
-                }}
-              >
-                <span style={{
-                  fontSize: 'clamp(0.6rem,0.85vw,0.74rem)',
-                  letterSpacing: '0.16em',
-                  textTransform: 'uppercase',
-                  whiteSpace: 'nowrap',
-                  color: 'rgba(240,237,232,0.9)',
-                  fontFamily: 'var(--font-display)',
-                  fontWeight: 500,
-                }}>
-                  {p.name}
-                </span>
-              </motion.a>
-            ))}
-          </div>
+        <div className="flex items-center justify-center gap-10 md:gap-16">
+          {[
+            { name: 'Forbes',  url: 'https://forbes.com'       },
+            { name: 'ESPN',    url: 'https://espn.com'         },
+            { name: 'TSM',     url: 'https://tsm.gg'           },
+            { name: 'TEDx',    url: 'https://ted.com/tedx'     },
+          ].map(p => (
+            <a
+              key={p.name}
+              href={p.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                fontSize: 'clamp(0.6rem,0.85vw,0.74rem)',
+                letterSpacing: '0.22em',
+                textTransform: 'uppercase',
+                color: 'rgba(240,237,232,0.9)',
+                fontFamily: 'var(--font-editorial)',
+                fontWeight: 500,
+                opacity: 0.28,
+                textDecoration: 'none',
+                transition: 'opacity 0.25s ease',
+              }}
+              onMouseEnter={e => (e.currentTarget.style.opacity = '0.75')}
+              onMouseLeave={e => (e.currentTarget.style.opacity = '0.28')}
+            >
+              {p.name}
+            </a>
+          ))}
         </div>
       </motion.div>
     </section>

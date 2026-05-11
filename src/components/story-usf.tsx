@@ -155,11 +155,6 @@ export default function StoryUSF() {
       >
         <SectionReveal>
 
-          <Reveal direction="none" className="flex items-center gap-4 mb-3">
-            <span style={{ fontSize: '0.62rem', letterSpacing: '0.5em', textTransform: 'uppercase', color: GOLD_DIM, fontFamily: 'var(--font-display)' }}>Chapter IV</span>
-            <span className="h-px w-12" style={{ background: `linear-gradient(90deg, ${GOLD_DIM}, transparent)` }} />
-            <span style={{ fontSize: '0.62rem', letterSpacing: '0.15em', color: 'rgba(200,144,58,0.22)', fontFamily: 'var(--font-display)' }}>2025 - Present</span>
-          </Reveal>
 
           <div style={{ marginBottom: 'clamp(1rem,2.5vh,2.5rem)' }}>
             <LineReveal delay={0.05}>
@@ -233,7 +228,7 @@ export default function StoryUSF() {
                   letterSpacing: '0.35em',
                   textTransform: 'uppercase',
                   color: 'rgba(248,248,248,0.38)',
-                  fontFamily: 'var(--font-display)',
+                  fontFamily: 'var(--font-editorial)',
                 }}>
                   #1 Peer Advisor Award
                 </span>
@@ -249,7 +244,7 @@ export default function StoryUSF() {
                     href="https://www.usf.edu/ai-cybersecurity-computing/index.aspx"
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{ fontSize: '0.68rem', letterSpacing: '0.08em', color: '#ffffff', fontFamily: 'var(--font-display)', textDecoration: 'none' }}
+                    style={{ fontSize: '0.68rem', letterSpacing: '0.08em', color: '#ffffff', fontFamily: 'var(--font-editorial)', textDecoration: 'none' }}
                   >
                     B.S. Information Technology @ University of South Florida
                   </a>
@@ -294,7 +289,7 @@ export default function StoryUSF() {
                       <span style={{ fontSize: 'clamp(0.82rem,1vw,0.95rem)', color: 'rgba(245,240,232,0.88)', fontFamily: 'var(--font-editorial)', fontWeight: 300, lineHeight: 1.2 }}>
                         {item.label}
                       </span>
-                      <span style={{ fontSize: '0.62rem', color: 'rgba(240,237,232,0.35)', fontFamily: 'var(--font-display)', letterSpacing: '0.04em', lineHeight: 1.4 }}>
+                      <span style={{ fontSize: '0.62rem', color: 'rgba(240,237,232,0.35)', fontFamily: 'var(--font-editorial)', letterSpacing: '0.04em', lineHeight: 1.4 }}>
                         {item.detail}
                       </span>
                     </motion.div>
@@ -331,7 +326,7 @@ export default function StoryUSF() {
               {/* Beyond the résumé */}
               <div style={{ borderBottom: `1px solid ${GOLD_FAINT}`, paddingBottom: 'clamp(1.25rem,2.5vh,2.5rem)', paddingTop: 'clamp(1.25rem,2.5vh,2.5rem)' }}>
                 <Reveal direction="none" delay={0.06}>
-                  <span style={{ fontSize: '0.58rem', letterSpacing: '0.45em', textTransform: 'uppercase', display: 'block', marginBottom: '0.9rem', color: 'rgba(200,144,58,0.38)', fontFamily: 'var(--font-display)' }}>
+                  <span style={{ fontSize: '0.58rem', letterSpacing: '0.45em', textTransform: 'uppercase', display: 'block', marginBottom: '0.9rem', color: 'rgba(200,144,58,0.38)', fontFamily: 'var(--font-editorial)' }}>
                     Beyond the résumé
                   </span>
                 </Reveal>
@@ -385,7 +380,7 @@ export default function StoryUSF() {
                       <motion.span
                         variants={{ hovered: { x: -3 }, initial: { x: 0 } }}
                         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                        style={{ fontSize: '0.6rem', color: 'rgba(240,237,232,0.38)', fontFamily: 'var(--font-display)', letterSpacing: '0.04em', flexShrink: 0, marginLeft: '1rem', textAlign: 'right', position: 'relative', whiteSpace: 'nowrap', overflow: 'visible' }}
+                        style={{ fontSize: '0.6rem', color: 'rgba(240,237,232,0.38)', fontFamily: 'var(--font-editorial)', letterSpacing: '0.04em', flexShrink: 0, marginLeft: '1rem', textAlign: 'right', position: 'relative', whiteSpace: 'nowrap', overflow: 'visible' }}
                       >
                         {item.sub}
                       </motion.span>
@@ -397,7 +392,7 @@ export default function StoryUSF() {
               {/* Technical Skills */}
               <div style={{ paddingTop: 'clamp(1.25rem,2.5vh,2.5rem)' }}>
                 <Reveal direction="none" delay={0.05}>
-                  <span style={{ fontSize: '0.58rem', letterSpacing: '0.45em', textTransform: 'uppercase', display: 'block', marginBottom: '1rem', color: 'rgba(200,144,58,0.38)', fontFamily: 'var(--font-display)' }}>
+                  <span style={{ fontSize: '0.58rem', letterSpacing: '0.45em', textTransform: 'uppercase', display: 'block', marginBottom: '1rem', color: 'rgba(200,144,58,0.38)', fontFamily: 'var(--font-editorial)' }}>
                     Technical Skills
                   </span>
                 </Reveal>
@@ -413,7 +408,7 @@ export default function StoryUSF() {
                         style={{
                           fontSize: 'clamp(0.65rem,0.8vw,0.78rem)',
                           letterSpacing: '0.02em',
-                          fontFamily: 'var(--font-display)',
+                          fontFamily: 'var(--font-editorial)',
                           color: isLit ? 'rgba(245,240,232,0.98)' : 'rgba(255,255,255,0.68)',
                           border: `1px solid ${isLit ? 'rgba(200,144,58,0.5)' : 'rgba(200,184,154,0.12)'}`,
                           borderRadius: '2px',

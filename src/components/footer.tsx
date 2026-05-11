@@ -38,7 +38,7 @@ export default function Footer() {
               display: 'block',
               marginBottom: 'clamp(1.5rem,3vh,2.5rem)',
               color: 'rgba(200,184,154,0.45)',
-              fontFamily: 'var(--font-display)',
+              fontFamily: 'var(--font-editorial)',
             }}>
               What&apos;s next
             </span>
@@ -84,7 +84,7 @@ export default function Footer() {
                   padding: 'clamp(0.9rem,1.8vh,1.2rem) clamp(2.2rem,3.5vw,3rem)',
                   background: 'linear-gradient(105deg, #c8903a 0%, #d4a84b 50%, #c8a040 100%)',
                   color: '#0c0a06',
-                  fontFamily: 'var(--font-display)',
+                  fontFamily: 'var(--font-editorial)',
                   fontSize: 'clamp(0.72rem,0.9vw,0.82rem)',
                   letterSpacing: '0.18em',
                   textTransform: 'uppercase',
@@ -108,7 +108,7 @@ export default function Footer() {
                 padding: 'clamp(0.9rem,1.8vh,1.2rem) clamp(2.2rem,3.5vw,3rem)',
                 border: '1px solid rgba(255,255,255,0.14)',
                 color: '#f0ede8',
-                fontFamily: 'var(--font-display)',
+                fontFamily: 'var(--font-editorial)',
                 fontSize: 'clamp(0.72rem,0.9vw,0.82rem)',
                 letterSpacing: '0.18em',
                 textTransform: 'uppercase',
@@ -128,12 +128,12 @@ export default function Footer() {
           className="flex flex-col md:flex-row items-center justify-between gap-3"
           style={{ padding: 'clamp(1.2rem,2.5vh,1.8rem) clamp(1.2rem,5vw,5rem)', maxWidth: '1100px', margin: '0 auto' }}
         >
-          <span style={{ fontSize: '0.65rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(240,237,232,0.18)', fontFamily: 'var(--font-display)' }}>
+          <span style={{ fontSize: '0.65rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(240,237,232,0.18)', fontFamily: 'var(--font-editorial)' }}>
             © 2026 Muhammad Kamil
           </span>
           <div className="flex items-center gap-8">
             {['Tampa, FL', 'mk7ft.com'].map(item => (
-              <span key={item} style={{ fontSize: '0.65rem', letterSpacing: '0.12em', color: 'rgba(240,237,232,0.18)', fontFamily: 'var(--font-display)' }}>
+              <span key={item} style={{ fontSize: '0.65rem', letterSpacing: '0.12em', color: 'rgba(240,237,232,0.18)', fontFamily: 'var(--font-editorial)' }}>
                 {item}
               </span>
             ))}
