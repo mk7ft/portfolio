@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 import { VisualEditsMessenger } from "orchids-visual-edits";
-import SmoothScroll from "@/components/providers/smooth-scroll";
-import CursorGlow from "@/components/cursor-glow";
 import Script from "next/script";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
@@ -24,31 +22,31 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Muhammad Kamil - Entrepreneur, Consultant, Operator.",
+  title: "Muhammad Kamil - GTM & Growth",
   description:
-    "Muhammad Kamil is a serial entrepreneur, esports consultant, and operator based in Tampa, FL. Founder of 7 ventures. Advisor to ESL, Riot Games, TSM, FaZe Clan & more. EMT. Athlete. Storyteller.",
+    "Muhammad Kamil runs growth and product at venture-backed startups. GTM at DoubleSpeed.ai. Founder of JRVS, SPRK, and Aster. Based in Tampa, FL.",
   keywords: [
     "Muhammad Kamil",
     "MK7",
-    "esports consultant",
-    "entrepreneur",
-    "operator",
+    "GTM",
+    "growth",
+    "startup",
+    "DoubleSpeed",
+    "JRVS",
+    "SPRK",
+    "Aster",
     "Tampa",
-    "USF",
-    "Spacestation Gaming",
-    "ESL",
-    "Riot Games",
-    "FaZe Clan",
-    "TSM",
+    "product",
+    "operator",
   ],
   authors: [{ name: "Muhammad Kamil", url: "https://mk7ft.com" }],
   creator: "Muhammad Kamil",
   metadataBase: new URL("https://mk7ft.com"),
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Muhammad Kamil - Entrepreneur, Consultant, Operator.",
+    title: "Muhammad Kamil - GTM & Growth",
     description:
-      "Serial entrepreneur, esports consultant, and operator. Founder of 7 ventures. Advisor to the world's top esports orgs.",
+      "GTM at DoubleSpeed.ai. Founder of JRVS, SPRK, and Aster. I run growth and product at venture-backed startups.",
     url: "https://mk7ft.com",
     siteName: "Muhammad Kamil",
     type: "website",
@@ -64,9 +62,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Muhammad Kamil - Entrepreneur, Consultant, Operator.",
+    title: "Muhammad Kamil - GTM & Growth",
     description:
-      "Serial entrepreneur, esports consultant, and operator. Founder of 7 ventures. Advisor to the world's top esports orgs.",
+      "GTM at DoubleSpeed.ai. Founder of JRVS, SPRK, and Aster. I run growth and product at venture-backed startups.",
     creator: "@mk7ft",
     images: ["/og-image.jpg"],
   },
@@ -91,14 +89,11 @@ export default function RootLayout({
           strategy="afterInteractive"
           data-orchids-project-id="68048e4c-e2a5-4ba2-a0fc-0aa615793434"
         />
-          <CursorGlow />
-          <SmoothScroll>
-            {children}
-          </SmoothScroll>
-            <VisualEditsMessenger />
-          <SpeedInsights />
-          <Analytics />
-        </body>
+        {children}
+        <VisualEditsMessenger />
+        <SpeedInsights />
+        <Analytics />
+      </body>
     </html>
   );
 }
