@@ -10,21 +10,21 @@ const COMPANIES = [
   },
   {
     name: 'sprk',
-    role: 'founder',
+    role: 'advisor',
     desc: 'ai edtech software for students.',
     tag: 'active',
     url: 'https://sprk.co',
   },
   {
     name: 'aster',
-    role: 'founder',
+    role: 'advisor',
     desc: "ai women's health and wellness app.",
     tag: 'active',
     url: 'https://aster.fit',
   },
   {
     name: 'jrvs',
-    role: 'founder',
+    role: 'advisor',
     desc: 'ai consulting and workflow agent.',
     tag: 'active',
     url: 'https://jrvs.pro',
@@ -34,7 +34,7 @@ const COMPANIES = [
 const STATS = [
   { n: '17M+', label: 'visitors served',   sub: 'saudi red crescent - emt and translator ops' },
   { n: '#1',   label: 'of 40 sales reps',  sub: 'vivint - $150k+ closed in 90 days'           },
-  { n: '50k+', label: 'customers managed', sub: 'aker & bekdash - $2.5M+ revenue processed'   },
+  { n: '50k+', label: 'customers managed', sub: 'aker & bekdash - $3M+ revenue managed'   },
 ];
 
 const PAD = 'clamp(1.5rem,6vw,5rem)';

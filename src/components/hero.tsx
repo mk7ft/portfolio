@@ -9,6 +9,7 @@ const PARTNERS = [
   { name: 'Forbes',           url: 'https://forbes.com'          },
   { name: 'ESPN',             url: 'https://espn.com'            },
   { name: 'Business Insider', url: 'https://businessinsider.com' },
+  { name: 'Dexerto',          url: 'https://dexerto.com'         },
 ];
 
 export default function Hero() {
@@ -34,16 +35,22 @@ export default function Hero() {
           justifyContent: 'space-between',
           gap: '1rem',
         }}>
-          <span style={{
-            fontFamily: 'var(--font-editorial)',
-            fontStyle: 'italic',
-            fontWeight: 300,
-            fontSize: 'clamp(1rem,1.4vw,1.25rem)',
-            color: 'var(--green)',
-            letterSpacing: '-0.01em',
-          }}>
+          <a
+            href="https://mk7ft.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              fontFamily: 'var(--font-editorial)',
+              fontStyle: 'italic',
+              fontWeight: 300,
+              fontSize: 'clamp(1rem,1.4vw,1.25rem)',
+              color: 'var(--green)',
+              letterSpacing: '-0.01em',
+              textDecoration: 'none',
+            }}
+          >
             MK7
-          </span>
+          </a>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
             <a
               href="https://linkedin.com/in/mk7ft"
