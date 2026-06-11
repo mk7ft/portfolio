@@ -23,11 +23,11 @@ const COMPANIES = [
     url: 'https://aster.fit',
   },
   {
-    name: 'jrvs',
+    name: 'dart',
     role: 'advisor',
-    desc: 'ai consulting and workflow agent.',
+    desc: 'ai automation and consulting agency.',
     tag: 'active',
-    url: 'https://jrvs.pro',
+    url: 'https://dart.ceo',
   },
 ];
 
