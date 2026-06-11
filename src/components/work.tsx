@@ -11,7 +11,7 @@ const COMPANIES = [
   {
     name: 'sprk',
     role: 'advisor',
-    desc: 'ai edtech software for students.',
+    desc: 'ai edtech and learning software.',
     tag: 'active',
     url: 'https://sprk.co',
   },
